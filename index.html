@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <LINK href="index.css" rel="stylesheet" type="text/css">
+      <title>Run Tracker</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -12,14 +16,45 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
+      <h1>Run Tracker</h1>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+<!--Sign up credentials  -->
+      <div id="sign-up">
+        <form id="sign-up-form">
+          <fieldset id = "credentials-sign-up">
+              <input name="credentials[email]" type="text" placeholder="username">
+              <input name="credentials[password]" type="password" placeholder="password">
+              <button>SIGN UP</button>
+            </fieldset>
+          </form>
+        </div>
+<!--Sign in credentials  -->
+        <div id="sign-in" >
+          <form id="sign-in-form">
+              <fieldset id = "credentials-sign-in">
+                  <input name="credentials[email]" type="text" placeholder="username">
+                  <input name="credentials[password]" type="password" placeholder="password">
+                  <button>SIGN IN</button>
+                </fieldset>
+              </form>
+        </div>
+<!--Change passowrd -->
+<div id="change-password">
+      <form id="change-password-form">
+        <fieldset id = "credentials-change-password">
+          <input name="passwords[old]" type="password" placeholder="current password">
+          <input name="passwords[new]" type="password" placeholder="new password">
+          <button>CHANGE PASSWORD</button>
+        </fieldset>
+      </form>
+    </div>
+<!--Sign out  -->
+<div id= "sign-out" >
+      <form id="sign-out-form">
+              <button>SIGN OUT</button>
+          </form>
+        </div>
+
+      <p> </p>
     </body>
 </html>
