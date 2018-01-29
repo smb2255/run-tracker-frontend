@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <LINK href="index.css" rel="stylesheet" type="text/css">
-      <title>Run Tracker</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -17,14 +11,15 @@
     </head>
     <body class="container-fluid">
       <h1>Run Tracker</h1>
-
+      <p id= "user-messages">
+      </p>
 <!--Sign up credentials  -->
       <div id="sign-up">
         <form id="sign-up-form">
           <fieldset id = "credentials-sign-up">
               <input name="credentials[email]" type="text" placeholder="username">
               <input name="credentials[password]" type="password" placeholder="password">
-              <button>SIGN UP</button>
+              <button class= "button-sign-up">SIGN UP</button>
             </fieldset>
           </form>
         </div>
