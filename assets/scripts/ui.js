@@ -26,6 +26,12 @@ const changePassSuccess = function () {
 const changePassFailure = function () {
   $('#user-messages').html('<p> You have not changed your password </p>')
 }
+const signOutSuccess = function () {
+  $('#user-messages').html(`<p>Sign-out success!</p>`)
+}
+const signOutFailure = function () {
+  $('#user-messages').html(`<p>Sign-out failed!</p>`)
+}
 
 module.exports = {
   signUpSuccess,
@@ -33,5 +39,7 @@ module.exports = {
   signInSuccess,
   signInFailure,
   changePassSuccess,
-  changePassFailure
+  changePassFailure,
+  signOutSuccess,
+  signOutFailure
 }
