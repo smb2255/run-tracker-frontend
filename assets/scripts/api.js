@@ -39,9 +39,22 @@ const signOut = function (data) {
   })
 }
 
+const createNewRun = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/runs/',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token,
+      'Content-Type': 'application/json'
+    },
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePass,
-  signOut
+  signOut,
+  createNewRun
 }

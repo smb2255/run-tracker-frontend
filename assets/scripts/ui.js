@@ -27,10 +27,17 @@ const changePassFailure = function () {
   $('#user-messages').html('<p> You have not changed your password </p>')
 }
 const signOutSuccess = function () {
+  store.user = null
   $('#user-messages').html(`<p>Sign-out success!</p>`)
 }
 const signOutFailure = function () {
   $('#user-messages').html(`<p>Sign-out failed!</p>`)
+}
+const newRunSuccess = function () {
+  $('#user-messages').html(`<p>New run stored!</p>`)
+}
+const newRunFailure = function () {
+  $('#user-messages').html(`<p>Run wasn't stored!</p>`)
 }
 
 module.exports = {
@@ -41,5 +48,7 @@ module.exports = {
   changePassSuccess,
   changePassFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  newRunSuccess,
+  newRunFailure
 }

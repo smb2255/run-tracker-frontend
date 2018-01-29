@@ -35,8 +35,15 @@ const onSignOut = function (event) {
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
-// const onNewRun = function (event) {
-// event.preventDefault()
+const onNewRun = function (event) {
+  event.preventDefault()
+  console.log('onNewRun reached')
+  let data = getFormFields(event.target)
+  data = JSON.stringify(data)
+  api.newRun(data)
+    .then(ui.newRunSuccess)
+    .catch(ui.newRunFailure)
+}
 
 // }
 const addHandlers = function () {
@@ -50,5 +57,6 @@ module.exports = {
   onSignIn,
   onChangePass,
   onSignOut,
+  onNewRun,
   addHandlers
 }
