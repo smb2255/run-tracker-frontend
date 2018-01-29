@@ -20,7 +20,7 @@ const signIn = function (data) {
 }
 const changePass = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/change-password/' + store.user,
+    url: config.apiOrigin + '/change-password/',
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token

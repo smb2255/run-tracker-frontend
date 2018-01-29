@@ -21,7 +21,8 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 const onChangePass = function (event) {
-  const data = getFormFields(this)
+  const data = getFormFields(event.target)
+  console.log('onChangePass reached')
   event.preventDefault()
   api.changePass(data)
     .then(ui.changePassSuccess)
@@ -34,7 +35,7 @@ const onChangePass = function (event) {
 const addHandlers = function () {
   $('#sign-up-form').on('submit', onSignUp)
   $('#sign-in-form').on('submit', onSignIn)
-  $('#user-messages').on('submit', onChangePass)
+  $('#change-password-form').on('submit', onChangePass)
 }
 module.exports = {
   onSignUp,
