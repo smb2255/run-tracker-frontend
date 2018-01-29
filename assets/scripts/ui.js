@@ -2,6 +2,7 @@
 const store = require('./store')
 
 const signUpSuccess = function () {
+  console.log('Sign up is successful')
   $('#user-messages').html(`<p> Sign up success! </p>`)
 }
 
