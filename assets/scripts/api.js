@@ -50,11 +50,22 @@ const createNewRun = function (data) {
     data
   })
 }
+const showAllMyRuns = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/runs/',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
 
 module.exports = {
   signUp,
   signIn,
   changePass,
   signOut,
-  createNewRun
+  createNewRun,
+  showAllMyRuns
 }

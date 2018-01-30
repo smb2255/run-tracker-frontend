@@ -40,9 +40,17 @@ const onNewRun = function (event) {
   console.log('onNewRun reached')
   let data = getFormFields(event.target)
   data = JSON.stringify(data)
-  api.newRun(data)
+  api.createNewRun(data)
     .then(ui.newRunSuccess)
     .catch(ui.newRunFailure)
+}
+
+const onShowAllMyRuns = function (event) {
+  event.preventDefault()
+  console.log('onShowAllMyRuns reached')
+  api.showAllMyRuns()
+    .then(ui.showAllMyRunsSuccess)
+    .catch(ui.showAllMyRunsFailure)
 }
 
 // }
@@ -51,6 +59,8 @@ const addHandlers = function () {
   $('#sign-in-form').on('submit', onSignIn)
   $('#change-password-form').on('submit', onChangePass)
   $('#sign-out-form').on('submit', onSignOut)
+  $('#new-run-form').on('submit', onNewRun)
+  $('#show-all-runs-form').on('submit', onShowAllMyRuns)
 }
 module.exports = {
   onSignUp,
@@ -58,5 +68,6 @@ module.exports = {
   onChangePass,
   onSignOut,
   onNewRun,
+  onShowAllMyRuns,
   addHandlers
 }

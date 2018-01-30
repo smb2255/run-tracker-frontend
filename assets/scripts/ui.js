@@ -19,6 +19,7 @@ const signInSuccess = function (response) {
   $('#change-password').show()
   $('#new-run').show()
   $('#sign-out').show()
+  $('#show-all-runs').show()
 }
 
 const signInFailure = function () {
@@ -45,11 +46,24 @@ const signOutSuccess = function () {
 const signOutFailure = function () {
   $('#user-messages').html(`<p>Sign-out failed!</p>`)
 }
-const newRunSuccess = function () {
-  $('#user-messages').html(`<p>New run stored!</p>`)
+const newRunSuccess = function (data) {
+  const runHtml = (`<H2>Run has been logged!</H2>
+    <ul>
+    <li>TIME: ${data.run.time}</li>
+    <LI>DISTANCE: ${data.run.distance}</LI>
+    <LI>DATE: ${data.run.date}</LI>
+    </ul>
+    `)
+  $('#user-messages').html(runHtml)
 }
 const newRunFailure = function () {
   $('#user-messages').html(`<p>Run wasn't stored!</p>`)
+}
+const showAllMyRunsSuccess = function (data) {
+  $('#user-messages').html(`<p> ${data.run} </p>`)
+}
+const showAllMyRunsFailure = function () {
+  $('#user-messages').html(`<p> You have no saved runs. </p>`)
 }
 
 module.exports = {
@@ -62,5 +76,7 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   newRunSuccess,
-  newRunFailure
+  newRunFailure,
+  showAllMyRunsSuccess,
+  showAllMyRunsFailure
 }
