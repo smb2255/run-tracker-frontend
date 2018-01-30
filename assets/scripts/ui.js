@@ -1,5 +1,6 @@
 'use strict'
 const store = require('./store')
+const showAllMyRunsTemplate = require('./templates/show-all-runs.handlebars')
 
 const signUpSuccess = function () {
   console.log('Sign up is successful')
@@ -60,7 +61,11 @@ const newRunFailure = function () {
   $('#user-messages').html(`<p>Run wasn't stored!</p>`)
 }
 const showAllMyRunsSuccess = function (data) {
-  $('#user-messages').html(`<p> ${data.run} </p>`)
+  $('#user-messages').html('')
+  store.runs = data.runs
+  console.log(data)
+  const showAllRunsHtml = showAllMyRunsTemplate({runs: data.runs})
+  $('#user-messages').append(showAllRunsHtml)
 }
 const showAllMyRunsFailure = function () {
   $('#user-messages').html(`<p> You have no saved runs. </p>`)
