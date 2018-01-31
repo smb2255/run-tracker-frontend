@@ -1,0 +1,9 @@
+{{#each runs as |run|}}
+  <div data-id="{{run.id}}" class="allRuns">
+    <button class="removeRunButton btn btn-defeult">Remove Run </button>
+    <strong>Date: {{run.date}}</strong>
+    <strong>Distance: {{run.distance}}mi</strong>
+    <strong>Time: {{run.time}}</strong>
+    <br>
+  </div>
+{{/each}}
