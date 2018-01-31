@@ -72,13 +72,14 @@ const deleteRun = function (data) {
 }
 
 const updateRun = function (data) {
-  const id = $(data).data('id')
   return $.ajax({
-    url: config.apiOrigin + '/runs/' + id,
+    url: config.apiOrigin + '/runs/' + store.updateId,
     method: 'PATCH',
     headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
+      Authorization: 'Token token=' + store.user.token,
+      'Content-Type': 'application/json'
+    },
+    data
   })
 }
 

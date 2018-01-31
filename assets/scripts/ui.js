@@ -90,7 +90,7 @@ const updateRunSuccess = function (data) {
 }
 
 const updateRunFailure = function (data) {
-  $('#user-messages').html(`<p> Error: run has not been updated</p>`)
+  $('#update-run-message').html(`<p> Error: run has not been updated</p>`)
 }
 module.exports = {
   signUpSuccess,

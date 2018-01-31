@@ -2,6 +2,7 @@
 const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api.js')
 const ui = require('./ui.js')
+const store = require('./store.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -64,7 +65,10 @@ const onDeleteRun = function (event) {
 
 const onUpdateRun = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
+  let data = getFormFields(event.target)
+  store.updateId = data.run.id
+  data = JSON.stringify(data)
+  console.log(data)
   api.updateRun(data)
     .then(ui.updateRunSuccess)
     .catch(ui.updateRunFailure)
