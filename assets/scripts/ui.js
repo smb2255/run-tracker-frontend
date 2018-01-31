@@ -21,6 +21,7 @@ const signInSuccess = function (response) {
   $('#new-run').show()
   $('#sign-out').show()
   $('#show-all-runs').show()
+  $('#delete-run').show()
 }
 
 const signInFailure = function () {
@@ -71,6 +72,15 @@ const showAllMyRunsFailure = function () {
   $('#user-messages').html(`<p> You have no saved runs. </p>`)
 }
 
+const deleteRunSuccess = function (data) {
+  console.log(data)
+  $(data).html('')
+  // $('#user-messages').html(`<p> Run was deleted </p>`)
+}
+const deleteRunFailure = function (data) {
+  $('#user-messages').html(`<p> Error: run not deleted </p>`)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -83,5 +93,7 @@ module.exports = {
   newRunSuccess,
   newRunFailure,
   showAllMyRunsSuccess,
-  showAllMyRunsFailure
+  showAllMyRunsFailure,
+  deleteRunSuccess,
+  deleteRunFailure
 }

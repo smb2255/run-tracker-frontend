@@ -50,14 +50,24 @@ const createNewRun = function (data) {
     data
   })
 }
-const showAllMyRuns = function (data) {
+const showAllMyRuns = function () {
   return $.ajax({
     url: config.apiOrigin + '/runs/',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data
+    }
+  })
+}
+
+const deleteRun = function (data) {
+  const id = $(data).data('id')
+  return $.ajax({
+    url: config.apiOrigin + '/runs/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
 
@@ -67,5 +77,6 @@ module.exports = {
   changePass,
   signOut,
   createNewRun,
-  showAllMyRuns
+  showAllMyRuns,
+  deleteRun
 }
