@@ -62,6 +62,14 @@ const onDeleteRun = function (event) {
     .catch(ui.deleteRunFailure)
 }
 
+const onUpdateRun = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.updateRun(data)
+    .then(ui.updateRunSuccess)
+    .catch(ui.updateRunFailure)
+}
+
 // const updateRun = function (event) {
 // event.preventDefault()
 // console.log('onUpdateRun reached')
@@ -76,6 +84,8 @@ const addHandlers = function () {
   $('#new-run-form').on('submit', onNewRun)
   $('#show-all-runs-form').on('submit', onShowAllMyRuns)
   $('#user-messages').on('click', '.removeRunButton', onDeleteRun)
+  $('#user-messages').on('click', '.updateRunButton', onUpdateRun)
+  $('#update-run-form').on('submit', onUpdateRun)
 }
 module.exports = {
   onSignUp,
@@ -85,5 +95,6 @@ module.exports = {
   onNewRun,
   onShowAllMyRuns,
   onDeleteRun,
+  onUpdateRun,
   addHandlers
 }

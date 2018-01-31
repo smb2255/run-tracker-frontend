@@ -55,9 +55,9 @@
   <form id="new-run-form">
     <fieldset id="enter-new-run">
       <button>LOG NEW RUN</button>
-      <input name="run[date]" type="text" placeholder="date of run">
-      <input name="run[time]" type="text" placeholder="total run time">
-      <input name="run[distance]" type="text" placeholder="run distance">
+      <input name="run[date]" type="text" placeholder="date of run: YYYY/MM/DD">
+      <input name="run[time]" type="text" placeholder="total run time: ">
+      <input name="run[distance]" type="text" placeholder="run distance: miles">
         </fieldset>
       </form>
 </div>
@@ -69,13 +69,17 @@
       </form>
       </div>
 
-      <!--Delete a run  -->
-      <div id="delete-run" style="display: none;">
-        <form id="delete-run-form">
-            <button>DELETE A RUN</button>
-            </form>
-            </div>
-
+<!--Update Run  -->
+<div id="update-run" style="display: none;">
+  <form id="update-run-form">
+    <fieldset id="update-one-run">
+      <button>UPDATE A RUN</button>
+      <input name="run[date]" type="text" placeholder="date of run: YYYY/MM/DD">
+      <input name="run[time]" type="text" placeholder="total run time: ">
+      <input name="run[distance]" type="text" placeholder="run distance: miles">
+      <input name="run[id]" type="text" placeholder="run id">
+        </fieldset>
+      </form>
       <p> </p>
     </body>
 </html>

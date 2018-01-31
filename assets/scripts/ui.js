@@ -1,6 +1,7 @@
 'use strict'
 const store = require('./store')
 const showAllMyRunsTemplate = require('./templates/show-all-runs.handlebars')
+const listHtml = require('./events')
 
 const signUpSuccess = function () {
   console.log('Sign up is successful')
@@ -57,6 +58,7 @@ const newRunSuccess = function (data) {
     </ul>
     `)
   $('#user-messages').html(runHtml)
+  $('#show-all-runs').show()
 }
 const newRunFailure = function () {
   $('#user-messages').html(`<p>Run wasn't stored!</p>`)
@@ -67,6 +69,8 @@ const showAllMyRunsSuccess = function (data) {
   console.log(data)
   const showAllRunsHtml = showAllMyRunsTemplate({runs: data.runs})
   $('#user-messages').append(showAllRunsHtml)
+  $('#update-run').show()
+  $('#show-all-runs').hide()
 }
 const showAllMyRunsFailure = function () {
   $('#user-messages').html(`<p> You have no saved runs. </p>`)
@@ -81,6 +85,13 @@ const deleteRunFailure = function (data) {
   $('#user-messages').html(`<p> Error: run not deleted </p>`)
 }
 
+const updateRunSuccess = function (data) {
+  $('#user-messages').html(`<p> Run has been updated </p>`)
+}
+
+const updateRunFailure = function (data) {
+  $('#user-messages').html(`<p> Error: run has not been updated</p>`)
+}
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -95,5 +106,7 @@ module.exports = {
   showAllMyRunsSuccess,
   showAllMyRunsFailure,
   deleteRunSuccess,
-  deleteRunFailure
+  deleteRunFailure,
+  updateRunSuccess,
+  updateRunFailure
 }

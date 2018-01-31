@@ -71,6 +71,17 @@ const deleteRun = function (data) {
   })
 }
 
+const updateRun = function (data) {
+  const id = $(data).data('id')
+  return $.ajax({
+    url: config.apiOrigin + '/runs/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
@@ -78,5 +89,6 @@ module.exports = {
   signOut,
   createNewRun,
   showAllMyRuns,
-  deleteRun
+  deleteRun,
+  updateRun
 }
