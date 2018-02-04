@@ -1,2 +1,86 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+$black: #000;
+$white: #fff;
+$pink: #ffc0cb;
+
+body {
+  font-size: 18px;
+}
+
+p >
+a {
+  color: $pink;
+  text-decoration: none;
+}
+
+p
+> a:hover {
+  color: $black;
+  text-decoration: none;
+  text-shadow: 0px 1px $black;
+}
+
+section {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 120px;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+.big-button {
+  background-color: $black;
+  border: 0;
+  color: $white;
+  display: block;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 120px;
+  height: 300px;
+  margin: 20px auto;
+  text-align: center;
+  width: 600px;
+}
+
+.input-field {
+  background: $white;
+  border: 1px solid $black;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  height: 25px;
+  margin: 5px auto;
+  width: 600px;
+}
+
+.navbar-brand {
+  cursor: default;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+  width: 610px;
+}
+.center > ul {
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+.justify {
+  font-size: 25px;
+  margin: 0 auto;
+  text-align: justify;
+  width: 600px;
+}
