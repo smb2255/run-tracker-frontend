@@ -1,8 +1,8 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-$black: #ffa726;
-$white: #29b6f6;
+$black: #ff9800;
+$white: #26a69a;
 $pink: #c71585;
 // $black: #000;
 // $white: #fff;
@@ -42,6 +42,11 @@ h1 {
   font-size: 120px;
   text-align: center;
 }
+
+.shrink {
+color: $black;
+}
+
 
 h2 {
   font-family: 'Josefin Sans', sans-serif;
