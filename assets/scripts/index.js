@@ -9,6 +9,14 @@ $(() => {
 })
 $(() => {
   events.addHandlers()
+  $('#change-pass').hide()
+  $('#sign-in-style').hide()
+  $('#sign-up-style').hide()
+  $('#create-run').hide()
+  $('#navigation').hide()
+  $('#greeting-space').hide()
+  $('#sign-space').hide()
+
 })
 
 // use require with a reference to bundle the file and use it in this file
