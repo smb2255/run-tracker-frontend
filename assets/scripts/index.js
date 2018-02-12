@@ -17,6 +17,7 @@ $(() => {
   $('#sign-in-style').hide()
   $('#sign-up-style').hide()
   $('#create-run').hide()
+  $('#update-run').hide()
   $('#navigation').hide()
   $('#greeting-space').hide()
   $('#sign-space').hide()

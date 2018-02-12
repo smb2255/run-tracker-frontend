@@ -1,7 +1,7 @@
 'use strict'
 const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api.js')
-const ui = require('./ui.js')
+const userUi = require('./userUi.js')
 // const store = require('./store.js')
 
 const introSignIn = function (event) {
@@ -27,8 +27,8 @@ const onSignUp = function (event) {
   const data = getFormFields(event.target)
   console.log('onSignUp reached')
   api.signUp(data)
-    .then(ui.signUpSuccess)
-    .catch(ui.signUpFailure)
+    .then(userUi.signUpSuccess)
+    .catch(userUi.signUpFailure)
   $('#sign-up-form').find('input[type=text], textarea').val('')
   $('#sign-up-form').find('input[type=password], textarea').val('')
 }
@@ -52,23 +52,23 @@ const onSignIn = function (event) {
   const data = getFormFields(event.target)
   console.log('onSignIn reached')
   api.signIn(data)
-    .then(ui.signInSuccess)
-    .catch(ui.signInFailure)
+    .then(userUi.signInSuccess)
+    .catch(userUi.signInFailure)
 }
 const onChangePass = function (event) {
   const data = getFormFields(event.target)
   console.log('onChangePass reached')
   event.preventDefault()
   api.changePass(data)
-    .then(ui.changePassSuccess)
-    .catch(ui.changePassFailure)
+    .then(userUi.changePassSuccess)
+    .catch(userUi.changePassFailure)
 }
 const onSignOut = function (event) {
   event.preventDefault()
   console.log('onSignOut reached')
   api.signOut()
-    .then(ui.signOutSuccess)
-    .catch(ui.signOutFailure)
+    .then(userUi.signOutSuccess)
+    .catch(userUi.signOutFailure)
 }
 
 // const addHandlers = function () {

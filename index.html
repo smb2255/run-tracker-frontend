@@ -74,7 +74,7 @@
         </section>
 <!--Sign in credentials  -->
 <section id="sign-in-style">
-        <h1 class="shrink">SIGN IN</h1>
+        <h1 class="sign-in-title">SIGN IN</h1>
         <div id="sign-in">
           <form id="sign-in-form">
             <div class="center">
@@ -133,18 +133,26 @@
       </div>
 
 <!--Update Run  -->
-<div id="update-run" style="display: none;">
+<section id="update-run" class="update-run-form">
+  <h1 class="shrink">UPDATE RUN</h1>
   <form id="update-run-form">
-    <fieldset id="update-one-run">
-      <button>UPDATE A RUN</button>
-      <input name="run[date]" type="text" placeholder="date of run: YYYY/MM/DD">
-      <input name="run[time]" type="text" placeholder="total run time: ">
-      <input name="run[distance]" type="text" placeholder="run distance: miles">
-      <input name="run[id]" type="text" placeholder="run id">
+    <div class="center">
+      <input name="run[date]" type="text" placeholder="DATE OF RUN: YYYY/MM/DD" class="input-field">
+      </div>
+      <div class="center">
+      <input name="run[time]" type="text" placeholder="TOTAL RUN TIME: " class="input-field">
+      </div>
+      <div class="center">
+      <input name="run[distance]" type="text" placeholder="RUN DISTANCE: MILES" class="input-field">
+      </div>
+      <div class="center"
+      <input name="run[id]" type="text" placeholder="run id" class="input-field">
+      </div>
+      <button class="little-button" id="update-list-form-button">SUBMIT</button>
+      </form>
       <p id="update-run-message" >
         </p>
         </fieldset>
-      </form>
-      <p> </p>
+      </section>
     </body>
 </html>

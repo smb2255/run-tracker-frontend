@@ -47,6 +47,9 @@ h1 {
 color: $black;
 }
 
+.sign-in-title {
+  color: $black;
+}
 
 h2 {
   font-family: 'Josefin Sans', sans-serif;
@@ -162,6 +165,16 @@ title {
 }
 
 #create-run .input-field {
+  background: $white;
+  border: 1px solid $black;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  height: 35px;
+  margin: 5px auto;
+  width: 298px;
+}
+
+#update-run .input-field {
   background: $white;
   border: 1px solid $black;
   font-family: 'Josefin Sans', sans-serif;

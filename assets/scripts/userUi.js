@@ -13,10 +13,15 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function (response) {
+  console.log('sign in reached')
   store.user = response.user
   $('#greeting-space').show()
   $('#sign-space').hide()
+  $('.sign-in-title').hide()
   $('#sign-in').hide()
+  $('#create-run').show()
+  $('#show-all-runs').show()
+  $('#update-run').show()
   const userGreet = store.user.email.split('@')
   if (userGreet[0].length < 16) {
     $('.user-greeting').html(userGreet[0]).css('text-transform', 'uppercase')
