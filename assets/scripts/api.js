@@ -60,6 +60,16 @@ const showAllMyRuns = function () {
   })
 }
 
+// const showAllMyRunsNew = function () {
+//   return $.ajax({
+//     url: config.apiOrigin + '/runs/',
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     }
+//   })
+// }
+
 const deleteRun = function (id) {
   // const id = $(data).data('id')
   return $.ajax({
@@ -92,4 +102,5 @@ module.exports = {
   showAllMyRuns,
   deleteRun,
   updateRun
+  // showAllMyRunsNew
 }

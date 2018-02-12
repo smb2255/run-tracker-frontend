@@ -29,6 +29,8 @@ const onDeleteRun = function (event) {
   api.deleteRun(data.run.id)
     .then(ui.deleteRunSuccess)
     .catch(ui.deleteRunFailure)
+// api.showAllMyRunsNew(data.run.id)
+// .th
 }
 
 // const onDeleteRun = function (event) {

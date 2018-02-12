@@ -21,7 +21,7 @@ $(() => {
   $('#navigation').hide()
   $('#greeting-space').hide()
   $('#sign-space').hide()
-  $('#show-all-runs').hide()
+  // $('#show-all-runs').hide()
   $('#show-all-runs-title').hide()
   $('#delete-run').hide()
 })
