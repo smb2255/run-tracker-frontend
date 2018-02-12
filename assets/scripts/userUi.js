@@ -22,7 +22,7 @@ const signInSuccess = function (response) {
   $('#create-run').show()
   $('#show-all-runs').show()
   $('#show-all-runs-title').show()
-  $('#update-run').show()
+  // $('#update-run').show()
   const userGreet = store.user.email.split('@')
   if (userGreet[0].length < 16) {
     $('.user-greeting').html(userGreet[0]).css('text-transform', 'uppercase')

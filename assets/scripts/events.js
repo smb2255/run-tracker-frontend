@@ -24,10 +24,10 @@ const onShowAllMyRuns = function (event) {
 
 const onDeleteRun = function (event) {
   event.preventDefault()
-  const id = event.target.id
-  console.log(id)
-  api.updateRun(id)
-    .then(() => ui.deleteRunSuccess(id))
+  const data = getFormFields(event.target)
+  console.log(data.run.id)
+  api.deleteRun(data.run.id)
+    .then(ui.deleteRunSuccess)
     .catch(ui.deleteRunFailure)
 }
 
@@ -57,7 +57,7 @@ const addHandlers = function () {
   // $('#remove-run-button').on('click', onDeleteRun)
   $('#user-messages').on('click', '.updateRunButton', onUpdateRun)
   $('#update-run-form').on('submit', onUpdateRun)
-  $('#delete-run').on('click', onDeleteRun)
+  $('#delete-run-form').on('submit', onDeleteRun)
 }
 module.exports = {
   onNewRun,

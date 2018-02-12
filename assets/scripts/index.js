@@ -23,6 +23,7 @@ $(() => {
   $('#sign-space').hide()
   $('#show-all-runs').hide()
   $('#show-all-runs-title').hide()
+  $('#delete-run').hide()
 })
 
 // use require with a reference to bundle the file and use it in this file

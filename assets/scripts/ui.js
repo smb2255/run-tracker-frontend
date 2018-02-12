@@ -32,10 +32,9 @@ const showAllMyRunsFailure = function () {
   $('#user-messages').html(`<p> You have no saved runs. </p>`)
 }
 
-const deleteRunSuccess = function (id) {
-  console.log(id)
-  $(id).remove()
-  // $('#user-messages').html(`<p> Run was deleted </p>`)
+const deleteRunSuccess = function () {
+  console.log('hi')
+  $('#user-messages').html(`<p> Run was deleted </p>`)
 }
 const deleteRunFailure = function (id) {
   $('#user-messages').html(`<p> Error: run not deleted </p>`)
