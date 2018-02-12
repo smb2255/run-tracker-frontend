@@ -60,8 +60,8 @@ const showAllMyRuns = function () {
   })
 }
 
-const deleteRun = function (data) {
-  const id = $(data).data('id')
+const deleteRun = function (id) {
+  // const id = $(data).data('id')
   return $.ajax({
     url: config.apiOrigin + '/runs/' + id,
     method: 'DELETE',

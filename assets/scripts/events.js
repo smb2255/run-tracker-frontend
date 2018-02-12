@@ -24,12 +24,21 @@ const onShowAllMyRuns = function (event) {
 
 const onDeleteRun = function (event) {
   event.preventDefault()
-  const data = $(this).parents('div')
-  console.log('what is this', data)
-  api.deleteRun(data)
-    .then(function () { ui.deleteRunSuccess(data) })
+  const id = event.target.id
+  console.log(id)
+  api.updateRun(id)
+    .then(() => ui.deleteRunSuccess(id))
     .catch(ui.deleteRunFailure)
 }
+
+// const onDeleteRun = function (event) {
+//   event.preventDefault()
+//   const data = $(this).parents('div')
+//   console.log('what is this', data)
+//   api.deleteRun(data)
+//     .then(function () { ui.deleteRunSuccess(data) })
+//     .catch(ui.deleteRunFailure)
+// }
 
 const onUpdateRun = function (event) {
   event.preventDefault()
@@ -45,10 +54,10 @@ const onUpdateRun = function (event) {
 const addHandlers = function () {
   $('#new-run-form').on('submit', onNewRun)
   $('#show-all-runs-button').on('click', onShowAllMyRuns)
-  $('#remove-run-button').on('click', '.removeRunButton', onDeleteRun)
+  // $('#remove-run-button').on('click', onDeleteRun)
   $('#user-messages').on('click', '.updateRunButton', onUpdateRun)
   $('#update-run-form').on('submit', onUpdateRun)
-  $('#remove-run').on('click', onDeleteRun)
+  $('#delete-run').on('click', onDeleteRun)
 }
 module.exports = {
   onNewRun,

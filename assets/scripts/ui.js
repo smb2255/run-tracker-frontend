@@ -24,6 +24,7 @@ const showAllMyRunsSuccess = function (data) {
   const showAllRunsHtml = showAllMyRunsTemplate({runs: data.runs})
   $('#user-messages').append(showAllRunsHtml)
   $('#update-run').show()
+  $('#delete-run').show()
   // $('#show-all-runs').hide()
   $('#show-all-runs').show()
 }
@@ -31,12 +32,12 @@ const showAllMyRunsFailure = function () {
   $('#user-messages').html(`<p> You have no saved runs. </p>`)
 }
 
-const deleteRunSuccess = function (data) {
-  console.log(data)
-  $(data).html('')
+const deleteRunSuccess = function (id) {
+  console.log(id)
+  $(id).remove()
   // $('#user-messages').html(`<p> Run was deleted </p>`)
 }
-const deleteRunFailure = function (data) {
+const deleteRunFailure = function (id) {
   $('#user-messages').html(`<p> Error: run not deleted </p>`)
 }
 
