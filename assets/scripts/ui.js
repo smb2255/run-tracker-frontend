@@ -24,7 +24,8 @@ const showAllMyRunsSuccess = function (data) {
   const showAllRunsHtml = showAllMyRunsTemplate({runs: data.runs})
   $('#user-messages').append(showAllRunsHtml)
   $('#update-run').show()
-  $('#show-all-runs').hide()
+  // $('#show-all-runs').hide()
+  $('#show-all-runs').show()
 }
 const showAllMyRunsFailure = function () {
   $('#user-messages').html(`<p> You have no saved runs. </p>`)

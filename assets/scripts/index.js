@@ -21,6 +21,7 @@ $(() => {
   $('#navigation').hide()
   $('#greeting-space').hide()
   $('#sign-space').hide()
+  $('#show-all-runs').hide()
 })
 
 // use require with a reference to bundle the file and use it in this file

@@ -1,10 +1,13 @@
-{{#each runs as |run|}}
+ {{#each runs as |run|}}
+<section id="show-all-runs">
   <div data-id="{{run.id}}" class="allRuns">
-    <button class="removeRunButton btn btn-default">Remove Run </button>
+    <button class="little-button">Remove Run </button>
+    <div class="center">
     <strong>ID: {{run.id}}</strong>
     <strong>Date: {{run.date}}</strong>
     <strong>Distance: {{run.distance}}mi</strong>
     <strong>Time: {{run.time}}</strong>
     <br>
   </div>
+  </section>
 {{/each}}
