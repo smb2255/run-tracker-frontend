@@ -24,6 +24,7 @@ $(() => {
   // $('#show-all-runs').hide()
   $('#show-all-runs-title').hide()
   $('#delete-run').hide()
+  $('#sign-out').hide()
 })
 
 // use require with a reference to bundle the file and use it in this file

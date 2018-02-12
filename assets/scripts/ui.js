@@ -16,6 +16,7 @@ const newRunSuccess = function (data) {
   $('#show-all-runs-title').show()
   $('#delete-runs-message').html('')
   $('#update-run-message').html('')
+  // $('#new-run-form').reset()
   api.showAllMyRuns()
     .then(showAllMyRunsSuccess)
     .catch(showAllMyRunsFailure)
