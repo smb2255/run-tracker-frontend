@@ -23,31 +23,11 @@
      </section>
      <!--nav items  -->
      <nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background: black;" id="navigation">
-                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <img src="https://image.ibb.co/gP5Rim/contract.png" alt="Toggle me!">
-                  </button>
                   <a class="navbar-brand" href="#" id="greeting-space">GO <span class="user-greeting"></span> GO</a>
                   <a class="navbar-brand" href="#" id="sign-space">#RUNTRAK</a>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                      <li class="nav-item">
-                        <a class="nav-link non-game sign-link" href="#" id="sign-in-link">SIGN IN</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link non-game sign-link" href="#" id="sign-up-link">SIGN UP</a>
-                      </li>
-                      <li class="nav-item active">
-                        <a class="nav-link non-game" href="#" id="all-runs-link">ALL RUNS</a>
-                      </li>
-                      <li class="nav-item active">
-                        <a class="nav-link non-game" href="#" id="create-run-link">NEW RUN</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link non-game" href="#" id="change-password-link">CHANGE PASS</a>
-                      </li>
-                      <li class="nav-item non-game">
-                        <a class="nav-link" href="#" id="sign-out-link">SIGN OUT</a>
-                      </li>
+
                     </ul>
                   </div>
                 </nav>
@@ -108,6 +88,13 @@
               <button>SIGN OUT</button>
           </form>
         </div>
+
+<!--Show all my runs  -->
+    <section id="show-all-runs-title">
+      <h1 class="shrink">ALL RUNS</h1>
+      <button class="little-button" id="show-all-runs-button">SHOW </button>
+      </section>
+
 <!--Enter a new run  -->
 <section id="create-run" class="create-run-form">
         <h1 class="shrink">NEW RUN</h1>
@@ -125,11 +112,6 @@
   </form>
   </section>
 
-<!--Show all my runs  -->
-
-  <h1 class="shrink">ALL RUNS</h1>
-   <button class="little-button" id="show-all-runs-button">SHOW </button>
-
 <!--Update Run  -->
 <section id="update-run" class="update-run-form">
   <h1 class="shrink">UPDATE RUN</h1>
@@ -143,7 +125,7 @@
       <div class="center">
       <input name="run[distance]" type="text" placeholder="RUN DISTANCE: MILES" class="input-field">
       </div>
-      <div class="center"
+      <div class="center">
       <input name="run[id]" type="text" placeholder="run id" class="input-field">
       </div>
       <button class="little-button" id="update-list-form-button">SUBMIT</button>

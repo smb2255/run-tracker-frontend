@@ -45,9 +45,10 @@ const onUpdateRun = function (event) {
 const addHandlers = function () {
   $('#new-run-form').on('submit', onNewRun)
   $('#show-all-runs-button').on('click', onShowAllMyRuns)
-  $('#user-messages').on('click', '.removeRunButton', onDeleteRun)
+  $('#remove-run-button').on('click', '.removeRunButton', onDeleteRun)
   $('#user-messages').on('click', '.updateRunButton', onUpdateRun)
   $('#update-run-form').on('submit', onUpdateRun)
+  $('#remove-run').on('click', onDeleteRun)
 }
 module.exports = {
   onNewRun,

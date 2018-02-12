@@ -21,6 +21,7 @@ const signInSuccess = function (response) {
   $('#sign-in').hide()
   $('#create-run').show()
   $('#show-all-runs').show()
+  $('#show-all-runs-title').show()
   $('#update-run').show()
   const userGreet = store.user.email.split('@')
   if (userGreet[0].length < 16) {
