@@ -22,7 +22,7 @@ const signInSuccess = function (response) {
   $('#create-run').show()
   $('#show-all-runs').show()
   $('#show-all-runs-title').show()
-  $('#change-password').show()
+  $('#change-pass').show()
   $('#sign-out').show()
   // $('#update-run').show()
   const userGreet = store.user.email.split('@')

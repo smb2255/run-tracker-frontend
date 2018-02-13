@@ -37,6 +37,7 @@ const showAllMyRunsSuccess = function (data) {
   // $('#show-all-runs').hide()
   $('#show-all-runs-title').show()
   $('#update-run-message').html('')
+  $('#user-messages').html('')
 }
 const showAllMyRunsFailure = function () {
   $('#show-all-runs').html(`<p> You have no saved runs. </p>`)
