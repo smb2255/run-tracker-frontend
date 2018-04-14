@@ -6,6 +6,8 @@ const signUpSuccess = function (data) {
   console.log('Sign up is successful')
   $('#user-messages').html(`<p> Sign up success! </p>`)
   $('#change-password').hide()
+  $('.sign-in-title').show()
+  $('#sign-in').show()
 }
 
 const signUpFailure = function () {
