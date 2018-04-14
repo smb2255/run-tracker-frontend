@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title> #RUNTRAK </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+    <!--Intro Page  -->
+    <section id="intro">
+       <h1 id="app-title" class="shrink">#RUNTRAK</h1>
+       <button class="big-button" id="sign-in-button-intro">SIGN IN</button>
+       <button class="big-button" id="sign-up-button-intro">SIGN UP</button>
+     </section>
+     <!--nav items  -->
+     <nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background: black;" id="navigation">
+                  <a class="navbar-brand" href="#" id="greeting-space">GO <span class="user-greeting"></span> GO</a>
+                  <a class="navbar-brand" href="#" id="sign-space">#RUNTRAK</a>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+
+                    </ul>
+                  </div>
+                </nav>
+
+      <p id= "user-messages">
+      </p>
+<!--Sign up credentials  -->
+<section id="sign-up-style">
+  <h1 class="shrink">SIGN UP</h1>
+      <div id="sign-up">
+        <form id="sign-up-form">
+          <div class="center">
+              <input name="credentials[email]" type="text" placeholder="USERNAME" class="input-field">
+              </div>
+            <div class="center">
+              <input name="credentials[password]" type="password" placeholder="PASSWORD" class="input-field">
+              </div>
+            <div class="center">
+              <input name="credentials[password_confirmation]" type="password" placeholder="PASSWORD CONFIRMATION" class="input-field">
+              </div>
+              <button class="little button" id="sign-up-button">SIGN UP</button>
+          </form>
+        </div>
+        </section>
+<!--Sign in credentials  -->
+<section id="sign-in-style">
+        <h1 class="sign-in-title">SIGN IN</h1>
+        <div id="sign-in">
+          <form id="sign-in-form">
+            <div class="center">
+                  <input name="credentials[email]" type="text" placeholder="USERNAME" class="input-field">
+                  </div>
+                  <div class="center">
+                  <input name="credentials[password]" type="password" placeholder="PASSWORD" class="input-field">
+                  </div>
+                  <button class="little-button" id="sign-in-button">SIGN IN</button>
+              </form>
+            </div>
+        </section>
+<!--Change passoword -->
+<section id="change-pass" class="change-pass">
+        <h1 class="shrink">CHANGE PASS</h1>
+<div id="change-password" >
+      <form id="change-password-form">
+        <div class="center">
+            <input name="passwords[old]" type="password" placeholder="CURRENT PASSWORD" class="input-field">
+            </div>
+        <div class="center">
+          <input name="passwords[new]" type="password" placeholder="NEW PASSWORD" class="input-field">
+          </div>
+          <button class="little-button" id="change-password-button">CONFIRM</button>
+      </form>
+  </div>
+</section>
+<!--Sign out  -->
+<section id="sign-out" class="sign-out">
+        <button class="little-button" id="sign-out-button">SIGN OUT</button>
+        <div class="right">
+          </div>
+        </section>
+
+
+
+<!--Show all my runs  -->
+    <section id="show-all-runs-title">
+      <h1 class="shrink">ALL RUNS</h1>
+      <div id= "show-all-runs">
+      <button class="little-button" id="show-all-runs-button">SHOW </button>
+    </div>
+      </section>
+
+<!-- Delete a run -->
+<section id="delete-run" class="delete-run-style">
+  <h1 class="shrink">DELETE RUN</h1>
+  <div id= "delete-runs-message" class="center">
+  </div>
+  <form id="delete-run-form" class="center">
+      <input name="run[id]" type="text" placeholder="run id" class="input-field">
+        <button class="little-button" id="delete-button">DELETE</button>
+        </form>
+        </section>
+
+<!--Enter a new run  -->
+<section id="create-run" class="create-run-form">
+        <h1 class="shrink">NEW RUN</h1>
+  <form id="new-run-form" >
+    <div class="center">
+      <input name="run[date]" type="text" placeholder="DATE OF RUN: YYYY/MM/DD" class="input-field">
+      </div>
+      <div class="center">
+      <input name="run[time]" type="text" placeholder="TOTAL RUN TIME" class="input-field">
+      </div>
+      <div class="center">
+      <input name="run[distance]" type="text" placeholder="RUN DISTANCE: MILES" class="input-field">
+      </div>
+    <button class="little-button" id="create-list-form-button">SUBMIT</button>
+  </form>
+  </section>
+
+<!--Update Run  -->
+<section id="update-run" class="update-run-form">
+  <h1 class="shrink">UPDATE RUN</h1>
+  <form id="update-run-form">
+    <div class="center">
+      <input name="run[date]" type="text" placeholder="DATE OF RUN: YYYY/MM/DD" class="input-field">
+      </div>
+      <div class="center">
+      <input name="run[time]" type="text" placeholder="TOTAL RUN TIME: " class="input-field">
+      </div>
+      <div class="center">
+      <input name="run[distance]" type="text" placeholder="RUN DISTANCE: MILES" class="input-field">
+      </div>
+      <div class="center">
+      <input name="run[id]" type="text" placeholder="run id" class="input-field">
+      </div>
+      <button class="little-button" id="update-list-form-button">SUBMIT</button>
+      </form>
+      <p id="update-run-message" >
+        </p>
+        </fieldset>
+      </section>
+    </body>
+</html>
+
+<!-- Delete a run -->
